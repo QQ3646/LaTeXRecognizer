@@ -61,6 +61,23 @@ def letters_extract(image_file: str, out_size=32):
 
     return letters
 
+token_labels = []
+
+def create_model():
+    model = Sequential()
+    model.add(Convolution2D(filters=32, kernel_size=(3, 3), padding='valid', input_shape=(32, 32, 1), activation='relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+    model.add(Convolution2D(filters=64, kernel_size=(3, 3), activation='relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+    model.add(Dropout(0.25))
+    model.add(Flatten())
+    model.add(Dense(512, activation='relu'))
+    model.add(Dropout(0.5))
+    model.add(Dense(len(token_labels), activation='softmax'))
+    
+    model.compile(loss='categorical_crossentropy', optimizer='adadelta', metrics=['accuracy'])
+    return model
+
 letters = letters_extract("./0.png")
 
 # i = 1
@@ -69,18 +86,9 @@ letters = letters_extract("./0.png")
 #     i += 1
 # cv2.waitKey(0)
 
-token_labels = []
+learning_rate_reduction = keras.callbacks.ReduceLROnPlateau(monitor='val_accuracy', patience=3, verbose=1, factor=0.5, min_lr=0.00001)
 
-def create_model():
-    model = Sequential()
-    model.add(Convolution2D(filters=32, kernel_size=(3, 3), padding='valid', input_shape=(32, 32, 1), activation='relu'))
-    model.add(Convolution2D(filters=64, kernel_size=(3, 3), activation='relu'))
-    model.add(MaxPooling2D(pool_size=(2, 2)))
-    model.add(Dropout(0.25))
-    model.add(Flatten())
-    model.add(Dense(512, activation='relu'))
-    model.add(Dropout(0.5))
-    model.add(Dense(len(token_labels), activation='softmax'))
-    model.compile(loss='categorical_crossentropy', optimizer='adadelta', metrics=['accuracy'])
-    return model
+model = create_model()
+model.fit(X_train, x_train_cat, validation_data=(X_test, y_test_cat), callbacks=[learning_rate_reduction], batch_size=64, epochs=30)
 
+model.save('emnist_letters.h5')
