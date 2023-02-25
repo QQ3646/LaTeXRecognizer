@@ -1,0 +1,1 @@
+$ \begin {pmatrix} 21 \\ - 6 \\ - 7 \end {pmatrix}, \begin {pmatrix} 3 \\ - 2 \\ 3 \end {pmatrix}, \begin {pmatrix} 0 \\ 1 \\ 0 \end {pmatrix} $

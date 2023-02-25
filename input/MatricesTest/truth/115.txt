@@ -1,0 +1,1 @@
+$ \begin {bmatrix} m & n & - 1 & d \end {bmatrix} \begin {bmatrix} x \\ y \\ z \\ 1 \end {bmatrix} = 0 $

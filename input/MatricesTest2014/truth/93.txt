@@ -1,0 +1,1 @@
+$ A \begin {pmatrix} 5 \\ 2 \end {pmatrix} = 2 \begin {pmatrix} 6 \\ 2 \end {pmatrix} $

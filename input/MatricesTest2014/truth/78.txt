@@ -1,0 +1,1 @@
+$ \begin {pmatrix} \cos \theta _ {1} \cos \theta _ {2} - \sin \theta _ {1} \sin \theta _ {2} \\ \sin \theta _ {1} \cos \theta _ {2} + \cos ^ {\theta} _ {1} \sin \theta _ {2} \end {pmatrix} $

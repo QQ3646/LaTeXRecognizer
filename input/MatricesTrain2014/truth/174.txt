@@ -1,0 +1,1 @@
+$ P ^ {- 1} \begin {pmatrix} 1 & 0 \\ 0 & 32 \end {pmatrix} P $

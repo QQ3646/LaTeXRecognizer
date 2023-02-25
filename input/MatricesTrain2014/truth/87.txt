@@ -1,0 +1,1 @@
+$\begin{pmatrix}x\\y\end{pmatrix}= \begin{pmatrix}t\\t\end{pmatrix}$

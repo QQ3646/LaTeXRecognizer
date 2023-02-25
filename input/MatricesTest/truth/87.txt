@@ -1,0 +1,1 @@
+$ A = \begin {pmatrix} - 12 & 10 \\ - 21 & 17 \end {pmatrix} $

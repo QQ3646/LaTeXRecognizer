@@ -1,0 +1,1 @@
+$ \begin {pmatrix} 1 & 1 & 4 \\ 3 & 0 & - 1 \\ 5 & 2 & 7 \end {pmatrix} ^ {3} = \begin {pmatrix} 206 & 86 & 304 \\ 26 & 8 & 26 \\ 438 & 180 & 634 \end {pmatrix} $

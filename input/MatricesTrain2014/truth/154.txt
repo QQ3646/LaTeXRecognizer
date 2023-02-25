@@ -1,0 +1,1 @@
+$\mathrm{A} \left[ \begin{matrix}p_1\\p_2\\p_3 \end{matrix} \right] + \left[ \begin{matrix}t_1\\t_2\\t_3 \end{matrix} \right] $

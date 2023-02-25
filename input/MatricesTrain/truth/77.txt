@@ -1,0 +1,1 @@
+$B = \begin{bmatrix}\frac{T}{t_1}\\0\\0\\0\end{bmatrix}$

@@ -1,0 +1,1 @@
+$ (-1)^{4}\begin{vmatrix}-1  &1  \\0  &2\end{vmatrix}=-2  $

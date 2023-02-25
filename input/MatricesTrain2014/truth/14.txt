@@ -1,0 +1,1 @@
+$P=\begin{pmatrix}1  &-2  \\1  &2\end{pmatrix}^{-1}=\begin{pmatrix}1/2  &1/2  \\-1/4 &1/4\end{pmatrix}$

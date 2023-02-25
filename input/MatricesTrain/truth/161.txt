@@ -1,0 +1,1 @@
+$ \begin {bmatrix} - 2 + 0 & - 4 + 0 \\ 3 + 6 & G + (- 2) \end {bmatrix} $

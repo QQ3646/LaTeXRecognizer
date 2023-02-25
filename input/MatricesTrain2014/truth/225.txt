@@ -1,0 +1,1 @@
+$T=\begin{pmatrix}1    &2    &1    \\2    &0    &-2   \\-1    &2    &3\end{pmatrix}$

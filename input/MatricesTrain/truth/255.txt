@@ -1,0 +1,1 @@
+$\begin{Vmatrix}y_1 & y_2 & \ldots & y_n \\y_1' & y_2' & \ldots & y_n' \\y_1'' & y_2'' & \ldots & y_n'' \\\ldots & \ldots & \ldots & \ldots \\y_1^{(n-1)} & y_2^{(n-1)} & \ldots & y_n^{(n-1)} \\\end{Vmatrix} = 0$

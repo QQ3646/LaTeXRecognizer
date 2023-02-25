@@ -1,0 +1,1 @@
+$T-xI=\begin{pmatrix}3-x  &0    &0   \\1    &3-x  &0   \\0    &0    &4-x\end{pmatrix}$

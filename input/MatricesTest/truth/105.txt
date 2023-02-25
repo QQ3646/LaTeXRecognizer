@@ -1,0 +1,1 @@
+$ \begin {pmatrix} \cos (\theta) & \sin (\theta) \\ - \sin (\theta) & \cos (\theta) \end {pmatrix} \begin {pmatrix} \frac {r} {\sqrt {2}} \\ \frac {r} {\sqrt {} 2} \end {pmatrix} $

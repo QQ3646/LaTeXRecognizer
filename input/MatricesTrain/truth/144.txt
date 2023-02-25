@@ -1,0 +1,1 @@
+$\begin{bmatrix}1 & 1 & 1 \\\alpha_1^2 & \alpha_2^2 & \alpha_3^2 \\\alpha_1^3 & \alpha_2^3 & \alpha_3^3 \\\end{bmatrix}$

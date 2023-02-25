@@ -1,0 +1,1 @@
+$ \begin {pmatrix} 3 - 2 ^ {101} & 3 \times 2 ^ {101} - 6 \\ 1 - 2 ^ {100} & 3 \times 2 ^ {100} - 2 \end {pmatrix} $

@@ -1,0 +1,1 @@
+$ B = \begin {pmatrix} 2 & 9 & 8 \\ 0 & - 1 & 8 \\ 4 & 6 & 7 \end {pmatrix} $

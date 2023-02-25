@@ -1,0 +1,1 @@
+$ (\begin {bmatrix} m _ {1, 1} & m _ {2, 1} \\ m _ {1, 2} & m _ {2, 2} \end {bmatrix} \begin {bmatrix} v _ {1} \\ v _ {2} \end {bmatrix}) ^ {T} $

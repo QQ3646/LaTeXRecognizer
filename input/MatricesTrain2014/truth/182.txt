@@ -1,0 +1,1 @@
+$ \begin {pmatrix} 0 \\ 1 \\ 0 \end {pmatrix} = \begin {pmatrix} sin (\theta) \\ cos (\theta) \\ 0 \end {pmatrix} $

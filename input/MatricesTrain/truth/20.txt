@@ -1,0 +1,1 @@
+ $P = \begin{bmatrix}P_{11}  & P_{12} \\P_{21} &  P_{22} \end{bmatrix}$

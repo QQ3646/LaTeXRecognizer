@@ -1,0 +1,1 @@
+$ A = \begin {pmatrix} - 6 & 28 \\ - 2 & 9 \end {pmatrix} $

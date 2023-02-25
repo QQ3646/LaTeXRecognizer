@@ -1,0 +1,1 @@
+$ A + B = \begin {pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end {pmatrix} + \begin {pmatrix} 2 & 9 & 8 \\ 0 & - 1 & 8 \\ 4 & 6 & 7 \end {pmatrix} $

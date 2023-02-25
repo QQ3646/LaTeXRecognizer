@@ -1,0 +1,1 @@
+$\begin{vmatrix}\alpha - E &  \beta  & 0 & 0  \\\beta & \alpha -E & \beta  &  0  \\0 & \beta & \alpha -E & \beta    \\0 & 0 & \beta & \alpha -E    \\\end{vmatrix}= 0$

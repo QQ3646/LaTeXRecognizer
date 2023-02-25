@@ -1,0 +1,1 @@
+$ T = \begin {pmatrix} \sqrt {3} / 2 & - 1 / 2 \\ 1 / 2 & \sqrt {3} / 2 \end {pmatrix} $

@@ -1,0 +1,1 @@
+$\begin{bmatrix}\alpha_1^4 & \alpha_2^4 & \alpha_3^4 \\\end{bmatrix}\;\; = \;\; - b_1\,\begin{bmatrix}\alpha_1^2 & \alpha_2^2 & \alpha_3^2 \\\end{bmatrix}\; - \; b_0\,\begin{bmatrix}\alpha_1 & \alpha_2 & \alpha_3 \\\end{bmatrix}$

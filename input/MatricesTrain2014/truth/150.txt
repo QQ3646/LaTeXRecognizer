@@ -1,0 +1,1 @@
+$F_n=\begin{vmatrix}1  &-1  &1  &-1  &1  &-1  &\ldots  \\1  &1   &0  &1   &0  &1   &\ldots  \\0  &1   &1  &0   &1  &0   &\ldots  \\0  &0   &1  &1   &0  &1   &\ldots  \\.  &.   &.  &.   &.  &.   &\ldots\end{vmatrix}$

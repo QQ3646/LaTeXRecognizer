@@ -1,0 +1,1 @@
+$ A I = \begin {bmatrix} 6 & 15 & 9 \\ 23 & 5 & 43 \end {bmatrix} $

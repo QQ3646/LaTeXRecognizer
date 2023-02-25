@@ -1,0 +1,1 @@
+$\begin{pmatrix}1\\2\end{pmatrix}\begin{pmatrix}1&2\end{pmatrix} = \begin{pmatrix}1 \times 1 & 1 \times 2 \\2 \times 1 & 2 \times 2 \\\end{pmatrix} = \begin{pmatrix}1 & 2 \\2 & 4 \\\end{pmatrix}$

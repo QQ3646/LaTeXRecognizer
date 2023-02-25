@@ -1,0 +1,1 @@
+$ \begin {bmatrix} a & b \\ c & d \end {bmatrix} \times \begin {bmatrix} \alpha \\ \beta \end {bmatrix} = \begin {bmatrix} a \alpha + b \beta \\ c \alpha + d \beta \end {bmatrix} $

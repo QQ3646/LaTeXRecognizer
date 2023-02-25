@@ -1,0 +1,1 @@
+$ \frac {1} {2 \times 5 - 3 \times 3} \begin {pmatrix} 5 & - 3 \\ - 3 & 2 \end {pmatrix} \begin {pmatrix} 28 & 94 & 70 & 102 \\ 44 & 153 & 112 & 163 \end {pmatrix} $

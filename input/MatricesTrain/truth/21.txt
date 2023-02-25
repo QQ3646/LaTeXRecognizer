@@ -1,0 +1,1 @@
+$P = \left[ \begin{matrix}p_1\\p_2\\p_3\\1 \end{matrix} \right]$

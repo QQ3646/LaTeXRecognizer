@@ -1,0 +1,1 @@
+$ \begin {bmatrix} 1 & 1 & 1 \\ \alpha _ {1} & \alpha _ {2} & \alpha _ {3} \\ \alpha ^ {2} _ {1} & \alpha ^ {2} _ {2} & \alpha ^ {2} _ {3} \end {bmatrix} $

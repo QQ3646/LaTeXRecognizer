@@ -1,0 +1,1 @@
+$\begin{pmatrix}x_n\\x_{n-1}\end{pmatrix}=\begin{pmatrix}2&1\\1&0\end{pmatrix}^{n-1}\begin{pmatrix}1\\1\end{pmatrix}$

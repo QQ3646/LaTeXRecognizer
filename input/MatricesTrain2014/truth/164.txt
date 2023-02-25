@@ -1,0 +1,1 @@
+$ \begin {bmatrix} 7 & 5 \\ 4 & - 2 \end {bmatrix} - \begin {bmatrix} - 1 & 2 \\ - 3 & 5 \end {bmatrix} = \begin {bmatrix} 8 & 3 \\ - 7 & 7 \end {bmatrix} $

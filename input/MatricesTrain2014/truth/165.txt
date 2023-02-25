@@ -1,0 +1,1 @@
+$ x = \begin {pmatrix} 2 \\ 1 \end {pmatrix} $
