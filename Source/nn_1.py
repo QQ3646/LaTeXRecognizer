@@ -18,13 +18,13 @@ def create_model():
     model.add(tf.keras.layers.Rescaling(1./255))
     model.add(Convolution2D(filters=32, kernel_size=(3, 3), padding='valid', input_shape=(45, 45, 3), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
-    model.add(Convolution2D(filters=32, kernel_size=(3, 3), activation='relu'))
-    model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Convolution2D(filters=64, kernel_size=(3, 3), activation='relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+    model.add(Convolution2D(filters=128, kernel_size=(3, 3), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Dropout(0.25))
     model.add(Flatten())
-    model.add(Dense(256, activation='relu'))
+    model.add(Dense(512, activation='relu'))
     model.add(Dropout(0.5))
     model.add(Dense(82))
     
@@ -40,9 +40,9 @@ def create_model():
 # cv2.waitKey(0)
 
 learning_rate_reduction = keras.callbacks.ReduceLROnPlateau(monitor='val_accuracy', patience=3, verbose=1, factor=0.5, min_lr=0.00001)
-# model = create_model()
-model = tf.keras.models.load_model('./own_model_1.h5')
-model.summary()
+model = create_model()
+# model = tf.keras.models.load_model('./own_model_1.h5')
+# model.summary()
 
 # x_train = []
 # y_train = []

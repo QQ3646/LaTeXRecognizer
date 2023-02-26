@@ -14,6 +14,7 @@ def letters_extract(image_file: str, out_size=45):
     img = cv2.imread(image_file)
     img = cv2.bitwise_not(img)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    edged = cv2.Canny(gray, 30, 200)
     rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     ret, thresh = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY)
     img_erode = cv2.erode(thresh, np.ones((3, 3), np.uint8), iterations=1)
@@ -26,6 +27,10 @@ def letters_extract(image_file: str, out_size=45):
     letters = []
     for idx, contour in enumerate(contours):
         (x, y, w, h) = cv2.boundingRect(contour)
+        x -= 20
+        y -= 20
+        w += 40
+        h += 40
         # print("R", idx, x, y, w, h, cv2.contourArea(contour), hierarchy[0][idx])
         # hierarchy[i][0]: the index of the next contour of the same level
         # hierarchy[i][1]: the index of the previous contour of the same level
@@ -55,7 +60,7 @@ def letters_extract(image_file: str, out_size=45):
             letter_square = letter_crop
 
         # Resize letter to XxX and add letter and its X-coordinate
-        letters.append((x, w, cv2.resize( cv2.bitwise_not(letter_square), (out_size, out_size), interpolation=cv2.INTER_AREA)))
+        letters.append((x, y, w, h, cv2.resize( cv2.bitwise_not(letter_square), (out_size, out_size), interpolation=cv2.INTER_AREA)))
 
     # Sort array in place by X-coordinate
     letters.sort(key=lambda x: x[0], reverse=False)
@@ -93,7 +98,7 @@ def take_rect(image_file: str, step=5, kernel_size=25, out_size=45):
             # else:
             #     letter_square = letter_crop
 
-            letters.append((x, w, cv2.resize( cv2.bitwise_not(letter_crop), (out_size, out_size), interpolation=cv2.INTER_AREA)))
+            letters.append((x, y, w, h, cv2.resize( cv2.bitwise_not(letter_crop), (out_size, out_size), interpolation=cv2.INTER_AREA)))
     letters.sort(key=lambda x: x[0], reverse=False)
     print('size', len(letters))
 
@@ -110,18 +115,23 @@ with open('classes.inf') as file:
             break
         classes.append(line)
 
-image_path = "./0.png"
+image_path = "./1.jpg"
 
-letters = take_rect(image_path, 5, 45, 45)
+letters = letters_extract(image_path)
 
-# i = 1
+i = 1
+file = open("./output.dat", "w")
 for letter in letters:
-    # cv2.imshow("test" + str(i), letter[2])
-    # rgb = cv2.cvtColor(letter[2], cv2.COLOR_BGR2RGB)
+    cv2.imshow("test" + str(i), letter[4])
+    # rgb = cv2.cvtColor(letter[4], cv2.COLOR_BGR2RGB)
     # img = np.array(rgb)
-    res = model.predict(letter[2][None,:,:], verbose = 0)
-    if res.max() > 3.:
-        print(res.max())
-        print(classes[res.argmax()])
-    # i += 1
+    img = cv2.cvtColor(letter[4][None,:,:], cv2.COLOR_BGR2RGB)
+    img = np.array(letter[4][None,:,:])
+    res = model.predict(img, verbose = 0)
+    # if res.max() > 1.:
+    print('Info:', letter[0], letter[1], letter[2], letter[3])
+    print(res.max())
+    print(classes[res.argmax()])
+    file.write(" ".join([str(letter[0]), str(letter[1]), str(letter[2]), str(letter[3]), str(classes[res.argmax()])]))
+    i += 1
 cv2.waitKey(0)
