@@ -16,15 +16,15 @@ import tensorflow as tf
 def create_model():
     model = Sequential()
     model.add(tf.keras.layers.Rescaling(1./255))
-    model.add(Convolution2D(filters=32, kernel_size=(3, 3), padding='valid', input_shape=(45, 45, 3), activation='relu'))
+    model.add(Convolution2D(filters=32, kernel_size=(4, 4), padding='valid', input_shape=(45, 45, 3), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Convolution2D(filters=64, kernel_size=(3, 3), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
-    model.add(Convolution2D(filters=128, kernel_size=(3, 3), activation='relu'))
+    model.add(Convolution2D(filters=64, kernel_size=(3, 3), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Dropout(0.25))
     model.add(Flatten())
-    model.add(Dense(512, activation='relu'))
+    model.add(Dense(256, activation='relu'))
     model.add(Dropout(0.5))
     model.add(Dense(82))
     
@@ -105,7 +105,7 @@ val_ds = val_ds.cache().prefetch(buffer_size=AUTOTUNE)
 print("Ready!")
 input()
 
-model.fit(train_ds, validation_data=val_ds, epochs=3)
+model.fit(train_ds, validation_data=val_ds, epochs=10)
 
 # x_train = x_train.astype('float32')
 # y_train = y_train.astype('float32')
